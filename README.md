@@ -1,2 +1,4 @@
 # 🐈 pico-cat
-Pico 8 Cat Game
+> Simple Pico 8 Cat Game
+>
+> https://vgcc-hub.github.io/pico-cat/
