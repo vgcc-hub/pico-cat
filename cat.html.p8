@@ -54,6 +54,8 @@ function uplr()
  if not check_collision(new_x, new_y) then
    plr.x, plr.y = new_x, new_y
  end
+ 
+ scroll_camera()
 end
 
 
@@ -72,11 +74,16 @@ end
 
 function check_collision(px, py)
   return is_solid_tile(px, py) or
-         is_solid_tile(px+7, py) or
-         is_solid_tile(px, py+7) or
-         is_solid_tile(px+7, py+7)
+         is_solid_tile(px+6, py) or
+         is_solid_tile(px, py+6) or
+         is_solid_tile(px+6, py+6)
 end
 
+function scroll_camera()
+  local cam_x = mid(0, plr.x-64, 240) -- limit map size
+  local cam_y = mid(0, plr.y-64, 240)
+  camera(cam_x, cam_y)
+end
 -->8
 -- fish --
 
